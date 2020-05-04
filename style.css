@@ -1,12 +1,10 @@
 * {
-    padding: 0;
-    margin:0;
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    background-color: blueviolet;
+    background-color: rgb(3, 3, 122);
 }
 
 .match-game {
@@ -15,6 +13,7 @@ body {
     grid-gap: 10px;
     margin: 50px;
     justify-content: center;
+    perspective: 1000px;
 }
 
 .card {
@@ -22,16 +21,29 @@ body {
     height: 300px;
     width: 250px;
     margin: 5px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
 }
 
-.front-side {
-    height: 100%;
-    width: 100%;
+.card:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
 }
 
 .back-side {
     height: 100%;
     width: 100%;
-    padding: 0px;
     position: absolute;
+    backface-visibility: hidden;
+}
+
+.front-side {
+    height: 100%;
+    width: 100%;
+    transform: rotateY(180deg);
 }
