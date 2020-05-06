@@ -1,33 +1,27 @@
 const cards = document.querySelectorAll('.card');
 
+let hasFlippedCard = false;
+let firstCard, secondCard;
+
 function flipCard() {
-    this.classList.toggle('flip');
-}
+    this.classList.add('flip');
 
-class Match {
-    constructor(totalTime, cards) {
-        this.totalTime = totalTime;
-        this.timeRemaining = totalTime;
-        this.timer = document.getElementById(timeRemaining)
-        this.cardsArray = cards;
-    }
-    
-    startGame() {
-        this.timeRemaining = this.totalTime;
-        this.matchedCards = [];
-        this.busy = true;        
-        this.cardToCheck = null;
-        this.shuffleCards();
-    }
+    if (!hasFlippedCard) {
+        hasFlippedCard = true;
+        firstCard = this;
+    }   else {
+        hasFlippedCard = false;
+        secondCard = this;
 
-    shuffleCards(cardsArray) {
-        for (let i = cardsArray.length - 1; i > 0; i--) {
-            const randIndex = Math.floor(Math.random() * (i + 1));
-            [cardsArray[i], cardsArray[randIndex]] = [cardsArray[randIndex], cardsArray[i]];
+        if(firstCard.dataset.framework === secondCard.dataset.framework) {
+            firstCard.removeEventListener('click', flipCard);
+            secondCard.removeEventListener('click', flipCard);
+        }   else {
+            setTimeout(() => {
+                firstCard.classList.remove('flip');
+                secondCard.classList.remove('flip');
+            }, 1500);
         }
-        cardsArray = cardsArray.map((card, index) => {
-            card.style.order = index;
-        });
     }
 }
 
