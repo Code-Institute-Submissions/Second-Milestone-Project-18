@@ -17,6 +17,17 @@ class Match {
         this.matchedCards = [];
         this.busy = true;        
         this.cardToCheck = null;
+        this.shuffleCards();
+    }
+
+    shuffleCards(cardsArray) {
+        for (let i = cardsArray.length - 1; i > 0; i--) {
+            const randIndex = Math.floor(Math.random() * (i + 1));
+            [cardsArray[i], cardsArray[randIndex]] = [cardsArray[randIndex], cardsArray[i]];
+        }
+        cardsArray = cardsArray.map((card, index) => {
+            card.style.order = index;
+        });
     }
 }
 
