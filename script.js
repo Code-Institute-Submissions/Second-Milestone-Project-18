@@ -12,6 +12,12 @@ class Match {
         this.cardsArray = cards;
     }
     
+    startGame() {
+        this.timeRemaining = this.totalTime;
+        this.matchedCards = [];
+        this.busy = true;        
+        this.cardToCheck = null;
+    }
 }
 
 cards.forEach(card => card.addEventListener('click', flipCard));
