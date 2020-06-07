@@ -2,7 +2,7 @@ const cards = document.querySelectorAll('.card');
 const start = document.getElementById('game-modal');
 const win = document.getElementById('win-modal');
 const lose = document.getElementById('lose-modal');
-
+let countDown = 60;
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
