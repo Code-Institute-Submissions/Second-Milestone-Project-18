@@ -1,4 +1,7 @@
 const cards = document.querySelectorAll('.card');
+const start = document.getElementById('game-modal');
+const win = document.getElementById('win-modal');
+const lose = document.getElementById('lose-modal');
 
 let hasFlippedCard = false;
 let lockBoard = false;
