@@ -7,13 +7,23 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.4.1/cosmo/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+    $(window).on('load',function(){
+        $('#myModal').modal('show');
+    });
+</script>
 <title>Star Wars: The Matching Game</title>
 </head>
 <body>
     <h1 class="title">Star Wars: The Matching Game</h1>
     <div id="game-modal">
-        <p>Welcome to Star Wars: The Matching Game!</p>
-        <p>Can you match all the pairs before time runs out?</p>
+        <h2>Welcome to Star Wars: The Matching Game!</h2>
+        <p>To complete the levels you must match all the pairs in the time provided.</p>
+        <p>Selecting higher difficulties will result in more cards placed on the field.</p>
+        <p>Can you complete all the levels in the time provided?</p>
+        <button class="btn-success" onclick="windowClose()">Easy</button>
+        <button class="btn-success" onclick="windowClose()">Normal</button>
+        <button class="btn-success" onclick="windowClose()">Hard</button>
     </div>
 
 
