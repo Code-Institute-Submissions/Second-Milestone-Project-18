@@ -11,6 +11,7 @@
 </head>
 <body>
     <h1 class="title">Star Wars: The Matching Game</h1>
+    <!--Game info, win and loss modals-->
     <div id="game-modal" class="modal">
         <div class="modal-content">
             <h2>Welcome to Star Wars: The Matching Game!</h2>
@@ -22,12 +23,15 @@
             <button class="btn-success" onclick="windowClose()">Hard</button>
         </div> 
     </div>
-
-
-
-
-
-
+    <div id="win-modal" class="end-modal">
+        <p>You Win!</p>
+        <button class="btn-success">Back to Menu</button>
+    </div> 
+    <div id="lose-modal" class="end-modal">
+        <p>You Lose!</p>
+        <button class="btn-success">Back to Menu</button>
+    </div>
+    <!--Game Board and Cards-->
     <section class="match-game">
         <div class="game-info">
             Time: <span id="time-remaining">60</span>
