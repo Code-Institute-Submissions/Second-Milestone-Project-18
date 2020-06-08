@@ -10,15 +10,12 @@ h1 {
     font-size: 4em;
     font-weight: bold;
     color: whitesmoke;
+    text-align: center;
 }
 
 body {
     margin: 0;
     background-color: rgb(3, 3, 122);
-}
-
-.title {
-    text-align: center;
 }
 
 #game-modal {
