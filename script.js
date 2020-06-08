@@ -1,12 +1,12 @@
+//variables
 const cards = document.querySelectorAll('.card');
-const start = document.getElementById('game-modal');
-const win = document.getElementById('win-modal');
-const lose = document.getElementById('lose-modal');
 
-let countDown = 60;
+let countdown;
 let cardFlipped = false;
 let lockBoard = false;
 let firstCard, secondCard;
+
+//functions
 
 function flipCard() {
     if (lockBoard) return;
@@ -24,6 +24,17 @@ function flipCard() {
     checkForMatch();
 }
 
+function restartGame () {
+    shuffle();
+    hideCards();
+    matchedCards = [];
+    totalTime = 60;
+    timer.innerText = totalTime
+    countdown = setInterval(startClock, 1000);
+    cards.forEach(card => {
+        card.addEventListener('click', flipCard);
+    });
+}
 
 function checkForMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
