@@ -89,6 +89,8 @@ body {
 
 .front-side {
     transform: rotateY(180deg);
+    backface-visibility: hidden;
+
 }
 
 .back-side {
