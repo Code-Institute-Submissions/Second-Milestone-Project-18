@@ -2,8 +2,9 @@ const cards = document.querySelectorAll('.card');
 const start = document.getElementById('game-modal');
 const win = document.getElementById('win-modal');
 const lose = document.getElementById('lose-modal');
+
 let countDown = 60;
-let hasFlippedCard = false;
+let cardFlipped = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
@@ -11,13 +12,13 @@ function flipCard() {
     if (lockBoard) return;
     this.classList.add('flip');
 
-    if (!hasFlippedCard) {
-        hasFlippedCard = true;
+    if (!cardFlipped) {
+        cardFlipped = true;
         firstCard = this;
         return;
     }    
         
-    hasFlippedCard = false;
+    cardFlipped = false;
      secondCard = this;
 
     checkForMatch();
