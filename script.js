@@ -52,6 +52,11 @@ function gameOver () {
     document.getElementById('lose-modal').classList.add('visible');
 }
 
+function gameWin() {
+    clearInterval(countdown);
+    document.getElementById('win-modal').classList.add('visible');
+}
+
 function checkForMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
     isMatch ? disableCards() : unflipCards();
