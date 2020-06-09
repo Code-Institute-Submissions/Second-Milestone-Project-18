@@ -8,7 +8,7 @@ let firstCard, secondCard;
 
 let totalTime = 60;
 let minute = 60;
-let timer = document.getElementById('time-remaining');
+let timer = document.getElementById('time');
 
 //functions
 
