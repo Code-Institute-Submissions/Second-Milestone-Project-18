@@ -6,6 +6,10 @@ let cardFlipped = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
+let totalTime = 60;
+let minute = 60;
+let timer = document.getElementById('time-remaining');
+
 //functions
 
 function flipCard() {
