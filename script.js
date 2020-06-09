@@ -40,6 +40,18 @@ function restartGame () {
     });
 }
 
+function startClock() {
+    totalTime--;
+    timer.innerText = totalTime;
+    if (totalTime <= 0)
+    gameOver ()
+}
+
+function gameOver () {
+    clearInterval (countdown);
+    document.getElementById('lose-modal').classList.add('visible');
+}
+
 function checkForMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
     isMatch ? disableCards() : unflipCards();
@@ -61,7 +73,7 @@ function unflipCards() {
 }
 
 function resetBoard() {
-    [hasFlippedCard, lockBoard] = [false, false];
+    [cardFlipped, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
 
