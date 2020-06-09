@@ -5,10 +5,19 @@ let countdown;
 let cardFlipped = false;
 let lockBoard = false;
 let firstCard, secondCard;
+let matchedCards = [];
 
 let totalTime = 60;
 let minute = 60;
 let timer = document.getElementById('time');
+
+let overlays = Array.from(document.getElementsByClassName('end-modal'));
+overlays.forEach(overlay => {
+    overlay.addEventListener('click', () => {
+        overlay.classList.remove('visible');
+        restartGame();
+    });
+});
 
 //functions
 
@@ -47,7 +56,7 @@ function startClock() {
     gameOver ()
 }
 
-function gameOver () {
+function gameOver() {
     clearInterval (countdown);
     document.getElementById('lose-modal').classList.add('visible');
 }

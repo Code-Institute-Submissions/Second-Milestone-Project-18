@@ -12,24 +12,20 @@
 <body>
     <h1 class="title">Star Wars: The Matching Game</h1>
     <!--Game information, win and loss modals-->
-    <div id="game-modal" class="modal">
+    <div id="game-modal" class="end-modal visible">
         <div class="modal-content">
             <h2>Welcome to Star Wars: The Matching Game!</h2>
             <p>Click a card to reveal its face, then click a second card to check for a match!</p>
             <p>If it is a match the cards will stay flipped, if not they will unflip and you will need to try again.</p>
-            <p>To complete a level you must match all the pairs in the time provided.</p>
-            <p>Selecting higher difficulties will result in more pairs placed on the field.</p>
-            <p>Can you complete all levels in a minute or less?</p>
-            <button class="btn-dark" onclick="windowClose()">Easy</button>
-            <button class="btn-dark" onclick="windowClose()">Normal</button>
-            <button class="btn-dark" onclick="windowClose()">Hard</button>
+            <p>Can you match all pairs in a minute or less?</p>
+            <p>Click anywhere on the screen to begin.  The fate of the galaxy depends on you!</p>
         </div> 
     </div>
-    <div id="win-modal" class="end-modal">
+    <!--<div id="win-modal" class="end-modal">--
         <p>You Win!</p>
         <button class="btn-success">Back to Menu</button>
     </div> 
-    <div id="lose-modal" class="end-modal">
+    <!--<div id="lose-modal" class="end-modal">
         <p>You Lose!</p>
         <button class="btn-success">Back to Menu</button>
     </div>

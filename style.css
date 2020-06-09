@@ -22,10 +22,10 @@ body {
     background-color: rgb(3, 3, 122);
 }
 
-#game-modal {
+.end-modal {
     position: fixed;
     display: none;
-    z-index: 2;
+    z-index: 1;
     left: 0;
     top: 0;
     right: 0;
@@ -33,6 +33,11 @@ body {
     width: 100%;
     height: 100%;
     background: rgb(0,0,0,0.5);
+}
+
+.end-modal.visible {
+    display: flex;
+    flex-direction: column;
 }
 
 .modal-content {
@@ -43,13 +48,7 @@ body {
     margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-}
-
-.end-modal {
-    position: fixed;
-    display: none;
-    z-index: 1;
+    width: 30%;
 }
 
 .game-info {
