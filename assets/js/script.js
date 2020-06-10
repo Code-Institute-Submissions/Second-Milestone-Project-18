@@ -1,5 +1,5 @@
 //variables
-//variables for the game 
+//variables for the match game and cards
 const cards = document.querySelectorAll('.card');
 let cardFlipped = false;
 let boardLock = false;
@@ -18,7 +18,6 @@ overlays.forEach(overlay => {
 });
 
 //functions
-
 //card flip that also adds to the flip counter everytime a card is flipped
 function cardFlip() {
     if (boardLock) return;
@@ -59,7 +58,6 @@ function disableCards() {
     secondCard.removeEventListener('click', cardFlip);
     resetGame();
 }
-
 
 function resetGame() {
     [cardFlipped, boardLock] = [false, false];
