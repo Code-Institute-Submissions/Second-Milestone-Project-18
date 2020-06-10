@@ -1,5 +1,4 @@
-/*universal, body and h1,h2 styling */
-
+/*universal, body, h1 and h2 styling */
 * {
     box-sizing: border-box;
 }
@@ -21,7 +20,6 @@ body {
 }
 
 /*styling for the overlay*/
-
 .overlay {
     position: fixed;
     display: none;
@@ -52,7 +50,6 @@ body {
 }
 
 /*styling for the flip counter and reset button*/
-
 .game-info {
     grid-column: 1 / -1;
     display: flex;
@@ -74,7 +71,6 @@ body {
 }
 
 /*styling for the game board and cards*/
-
 .match-game {
     display: grid;
     grid-template-columns: repeat(5, auto);
@@ -118,7 +114,6 @@ body {
 }
 
 /*media query for small devices*/
-
 @media (max-width: 600px) {
     .match-game {
         width: 10vw;
