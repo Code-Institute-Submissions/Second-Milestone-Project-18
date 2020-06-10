@@ -112,3 +112,9 @@ body {
     transform: rotateY(180deg);
     backface-visibility: hidden;
 }
+
+@media (max-width: 600px) {
+    .match-game {
+        width: 50vw;
+    }
+}
