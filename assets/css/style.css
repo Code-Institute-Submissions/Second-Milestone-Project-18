@@ -1,3 +1,5 @@
+/*universal, body and h1,h2 styling */
+
 * {
     box-sizing: border-box;
 }
@@ -13,14 +15,12 @@ h2 {
     font-size: 2em;
 }
 
-a {
-    color: yellow
-}
-
 body {
     margin: 0;
     background-image: url(https://wallpaperaccess.com/full/1258637.jpg);
 }
+
+/*styling for the overlay*/
 
 .overlay {
     position: fixed;
@@ -51,6 +51,8 @@ body {
     width: 30%;
 }
 
+/*styling for the flip counter and reset button*/
+
 .game-info {
     grid-column: 1 / -1;
     display: flex;
@@ -70,6 +72,8 @@ body {
     background-color: yellow;
     border: black;
 }
+
+/*styling for the game board and cards*/
 
 .match-game {
     display: grid;
@@ -112,6 +116,8 @@ body {
     transform: rotateY(180deg);
     backface-visibility: hidden;
 }
+
+/*media query for small devices*/
 
 @media (max-width: 600px) {
     .match-game {
