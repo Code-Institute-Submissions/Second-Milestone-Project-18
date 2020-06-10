@@ -62,7 +62,7 @@ body {
 }
 
 .button-container{
-    margin-left: 580px;
+    margin-left: 740px;
 }
 
 .button {
@@ -72,7 +72,7 @@ body {
 
 .match-game {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
     grid-gap: 10px;
     margin: 50px;
     justify-content: center;
