@@ -12,8 +12,8 @@
 <body>
     <h1 class="title"><a href="index.html">Star Wars: The Matching Game</a></h1>
     <!--Game information-->
-    <div id="game-modal" class="end-modal visible">
-        <div class="modal-content">
+    <div id="game-overlay" class="overlay visible">
+        <div class="overlay-content">
             <h2>Welcome to Star Wars: The Matching Game!</h2>
             <p>Click a card to reveal its face, then click a second card to check for a match!</p>
             <p>If the cards match they will stay flipped, if not they will reset and you will need to try again.</p>
@@ -27,85 +27,85 @@
         <div class="game-info">
         <div class="flips-counter">Flips: <span id="flips">0</span>
     <!--Easy reset button from https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click-->
-        <button class onclick="window.location.reload();">Reset</button></div>
+        <button class="button" onclick="window.location.reload();">Reset</button></div>
         </div>
-        <div class="card" data-framework="Darth Vader">
+        <div class="card" data-img="Darth Vader">
             <img class="front-side" src="assets/images/cards/card1.jpg" alt="Darth Vader"/>
             <img class="back-side" src="assets/images/cards/logo.jpg" alt="Star Wars Logo"/>
         </div>
-        <div class="card" data-framework="Darth Vader">
+        <div class="card" data-img="Darth Vader">
             <img class="front-side" src="assets/images/cards/card1.jpg" alt="Darth Vader"/>
             <img class="back-side" src="assets/images/cards/logo.jpg" alt="Star Wars Logo"/>
         </div>
-        <div class="card" data-framework="Storm Trooper">
+        <div class="card" data-img="Storm Trooper">
             <img class="front-side" src="assets/images/cards/card10.jpg" alt="Storm Trooper"/>
             <img class="back-side" src="assets/images/cards/logo.jpg" alt="Star Wars Logo"/>
         </div>
-        <div class="card" data-framework="Storm Trooper">
+        <div class="card" data-img="Storm Trooper">
             <img class="front-side" src="assets/images/cards/card10.jpg" alt="Storm Trooper"/>
             <img class="back-side" src="assets/images/cards/logo.jpg" alt="Star Wars Logo"/>
         </div>
-        <div class="card" data-framework="Bobba Fett">
+        <div class="card" data-img="Bobba Fett">
             <img class="front-side" src="assets/images/cards/card9.jpg" alt="Bobba Fett"/>
             <img class="back-side" src="assets/images/cards/logo.jpg" alt="Star Wars Logo"/>
         </div>
-        <div class="card" data-framework="Bobba Fett">
+        <div class="card" data-img="Bobba Fett">
             <img class="front-side" src="assets/images/cards/card9.jpg" alt="Bobba Fett"/>
             <img class="back-side" src="assets/images/cards/logo.jpg" alt="Star Wars Logo"/>
         </div>
-        <div class="card" data-framework="Chewbacca">
+        <div class="card" data-img="Chewbacca">
             <img class="front-side" src="assets/images/cards/card5.jpg" alt="Chewbacca"/>
             <img class="back-side" src="assets/images/cards/logo.jpg" alt="Star Wars Logo"/>
         </div>
-        <div class="card" data-framework="Chewbacca">
+        <div class="card" data-img="Chewbacca">
             <img class="front-side" src="assets/images/cards/card5.jpg" alt="Chewbacca"/>
             <img class="back-side" src="assets/images/cards/logo.jpg" alt="Star Wars Logo"/>
         </div>
-        <div class="card" data-framework="R2D2">
+        <div class="card" data-img="R2D2">
             <img class="front-side" src="assets/images/cards/card2.jpg" alt="R2D2"/>
             <img class="back-side" src="assets/images/cards/logo.jpg" alt="Star Wars Logo"/>
         </div>
-        <div class="card" data-framework="R2D2">
+        <div class="card" data-img="R2D2">
             <img class="front-side" src="assets/images/cards/card2.jpg" alt="R2D2"/>
             <img class="back-side" src="assets/images/cards/logo.jpg" alt="Star Wars Logo"/>
         </div>
-        <div class="card" data-framework="C3P0">
+        <div class="card" data-img="C3P0">
             <img class="front-side" src="assets/images/cards/card3.jpg" alt="C3P0"/>
             <img class="back-side" src="assets/images/cards/logo.jpg" alt="Star Wars Logo"/>
         </div>
-        <div class="card" data-framework="C3P0">
+        <div class="card" data-img="C3P0">
             <img class="front-side" src="assets/images/cards/card3.jpg" alt="C3P0"/>
             <img class="back-side" src="assets/images/cards/logo.jpg" alt="Star Wars Logo"/>
         </div>
-        <div class="card" data-framework="Han Solo">
+        <div class="card" data-img="Han Solo">
             <img class="front-side" src="assets/images/cards/card6.jpg" alt="Han Solo"/>
             <img class="back-side" src="assets/images/cards/logo.jpg" alt="Star Wars Logo"/>
         </div>
-        <div class="card" data-framework="Han Solo">
+        <div class="card" data-img="Han Solo">
             <img class="front-side" src="assets/images/cards/card6.jpg" alt="Han Solo"/>
             <img class="back-side" src="assets/images/cards/logo.jpg" alt="Star Wars Logo"/>
         </div>
-        <div class="card" data-framework="Luke Skywalker">
+        <div class="card" data-img="Luke Skywalker">
             <img class="front-side" src="assets/images/cards/card7.jpg" alt="Luke Skywalker"/>
             <img class="back-side" src="assets/images/cards/logo.jpg" alt="Star Wars Logo"/>
         </div>
-        <div class="card" data-framework="Luke Skywalker">
+        <div class="card" data-img="Luke Skywalker">
             <img class="front-side" src="assets/images/cards/card7.jpg" alt="Luke Skywalker"/>
             <img class="back-side" src="assets/images/cards/logo.jpg" alt="Star Wars Logo"/>
         </div>
-        <div class="card" data-framework="Princess Leia">
+        <div class="card" data-img="Princess Leia">
             <img class="front-side" src="assets/images/cards/card8.jpg" alt="Princess Leia"/>
             <img class="back-side" src="assets/images/cards/logo.jpg" alt="Star Wars Logo"/>
         </div>
-        <div class="card" data-framework="Princess Leia">
+        <div class="card" data-img="Princess Leia">
             <img class="front-side" src="assets/images/cards/card8.jpg" alt="Princess Leia"/>
             <img class="back-side" src="assets/images/cards/logo.jpg" alt="Star Wars Logo"/>
         </div>
-        <div class="card" data-framework="Lando">
+        <div class="card" data-img="Lando">
             <img class="front-side" src="assets/images/cards/card4.jpg" alt="Lando"/>
             <img class="back-side" src="assets/images/cards/logo.jpg" alt="Star Wars Logo"/>
         </div>
-        <div class="card" data-framework="Lando">
+        <div class="card" data-img="Lando">
             <img class="front-side" src="assets/images/cards/card4.jpg" alt="Lando"/>
             <img class="back-side" src="assets/images/cards/logo.jpg" alt="Star Wars Logo"/>
         </div>
