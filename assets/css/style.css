@@ -19,7 +19,7 @@ a {
 
 body {
     margin: 0;
-    background-image: url(assets/images/background.jpg);
+    background-image: url(https://wallpaperaccess.com/full/1258637.jpg);
 }
 
 .overlay {
@@ -57,7 +57,17 @@ body {
 }
 
 .flips-counter {
-    color: white;
+    font-size: 1.25em;
+    color: yellow;
+}
+
+.button-container{
+    margin-left: 580px;
+}
+
+.button {
+    background-color: yellow;
+    border: black;
 }
 
 .match-game {
@@ -100,13 +110,4 @@ body {
 .front-side {
     transform: rotateY(180deg);
     backface-visibility: hidden;
-
-}
-
-.btn-dark {
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    width: 200px;
-    background-color: red;
 }
