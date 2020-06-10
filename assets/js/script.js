@@ -1,21 +1,16 @@
 //variables
 const cards = document.querySelectorAll('.card');
 
-let countdown;
 let cardFlipped = false;
 let lockBoard = false;
 let firstCard, secondCard;
-let matchedCards = [];
-
-let totalTime = 60;
-let minute = 60;
-let timer = document.getElementById('time');
+let flipCount =0;
+let ticker = document.getElementById('flips');
 
 let overlays = Array.from(document.getElementsByClassName('end-modal'));
 overlays.forEach(overlay => {
     overlay.addEventListener('click', () => {
         overlay.classList.remove('visible');
-        restartGame();
     });
 });
 
@@ -23,6 +18,9 @@ overlays.forEach(overlay => {
 
 function flipCard() {
     if (lockBoard) return;
+    if (this ===firstCard) return;
+    flipCount ++;
+    ticker.innerText = flipCount;
     this.classList.add('flip');
 
     if (!cardFlipped) {
@@ -35,35 +33,6 @@ function flipCard() {
      secondCard = this;
 
     checkForMatch();
-}
-
-function restartGame () {
-    shuffle();
-    hideCards();
-    matchedCards = [];
-    totalTime = 60;
-    timer.innerText = totalTime
-    countdown = setInterval(startClock, 1000);
-    cards.forEach(card => {
-        card.addEventListener('click', flipCard);
-    });
-}
-
-function startClock() {
-    totalTime--;
-    timer.innerText = totalTime;
-    if (totalTime <= 0)
-    gameOver ()
-}
-
-function gameOver() {
-    clearInterval (countdown);
-    document.getElementById('lose-modal').classList.add('visible');
-}
-
-function gameWin() {
-    clearInterval(countdown);
-    document.getElementById('win-modal').classList.add('visible');
 }
 
 function checkForMatch() {
