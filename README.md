@@ -1,9 +1,9 @@
 # Star Wars: The Memory Game
-#### The objective of this project is to create an interactive website than responds to users inputs.  This website features a matching game that will test the user's memory in an enjoyable manner.  
+#### The objective of this project is to create an interactive website than responds to a user's inputs.  This website features a matching game that will test the user's memory in a fun and engaging manner.  
 ## UX
-#### This project is aimed at users of all ages who wish to test and improve their memory.  The game's theme is Star Wars, and the background picture adds to the immersion. 
+#### This project is aimed at users of all ages who wish to test and improve their memory.  The game's theme is Star Wars, and the background picture was employed to add to the immersion. 
 #### As a user I want the cards to be placed randomly so the experience is different each time.
-#### As a user I want the number of clicks displayed so I know I am improving
+#### As a user I want the number of clicks displayed so I know I am improving my memory.
 #### As a user I want a reset button so I can quickly replay the game.
 ## Features
 #### Header - Features the title of the game.
@@ -33,7 +33,7 @@
 #### Family members were kindly asked to test the completed project; all users could flip and match the cards, reset the game, and read how many flips they needed to complete the game. 
 #### Cards were also tested extensivley to see if they would stay flipped if there was a match, and if the cards would reset if there was not a match.
 ## Deployment
-#### GitHub was used as the local repository for this site.  Commits were made frequently to ensure that code was never accidently lose, as well as a fallback if the code unintentionally broke code.  Once the final pieces of code was pushed into the repository, the project was deployed by visiting the repository on GitHub and going to settings tab.  The master branch was selected as the source, and a link to the deployed project was provided. https://russellrothenbach.github.io/Second-Milestone-Project/
+#### GitHub was used as the local repository for this site.  Commits were made frequently to ensure that code was never accidently lost, and the commits also acted as a fallback in the event that newly written code unintentionally broke older code.  Once the final pieces of code was pushed into the repository, the project was deployed by visiting the repository on GitHub and going to settings tab.  The master branch was selected as the source, and a link to the deployed project was provided. https://russellrothenbach.github.io/Second-Milestone-Project/
 ## Credits
 ### Media
 #### Darth Vader image was taken from: https://boygeniusreport.files.wordpress.com/2015/08/darth-vader.jpg?quality=70&strip=all&w=782
@@ -48,4 +48,4 @@
 #### Lando Calrissian image was taken from: https://vignette.wikia.nocookie.net/starwars/images/7/7d/Lando_WoSW.jpg/revision/latest?cb=20080715214753
 #### Background image was taken from: https://wallpapercave.com/wp/wp5991799.jpg
 ### Acknowledgements
-#### I received inspiration for this project from Code Institute, and some JavaScript tutorials from freeCodeCamp.
+#### I received inspiration for this project from Code Institute, and some help getting started on this matching game via JavaScript tutorials from freeCodeCamp.
